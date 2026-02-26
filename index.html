@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css">
+
+    <title>Cantinho do Cookie</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="w-full h-105 bg-zinc-900 bg-home font-display">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/logocookie3.png"
+            alt="Logo Cookie"
+            class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+                Cantinho do Cookie
+            </h1>
+            <span class="text-white font-medium">Aceitamos Pix e Cartão</span>
+            <div class="bg-[#714520] px-4 py-1 rounded-lg mt-5" id="data-span">
+                <span class="text-white font-medium">Faça sua Encomenda</span>
+            </div>
+        </div>
+    </header>
+    <!-- Fim do Header -->
+
+    <h2 class="text-xl md:text-3xl font-medium text-center mt-9 mb-6">
+        Conheça Nossos Sabores
+    </h2>
+
+    <!-- Menu -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+
+            <!-- Produto Item -->
+             <div class="flex gap-2">
+                <img 
+                src="./assets/trad.png"
+                alt="CookieTrad"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                <div>
+                <p class="font-bold">Cookie Tradicional</p>
+                <p class="text-sm">Massa amanteigada com gotas de chocolate, levemente crocante por fora e macia por dentro, com sabor clássico irresistível.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 10,00</p>
+                    <button
+                        class="bg-[#714520] px-5 rounded add-to-cart-btn"
+                        data-name="Cookie Tradicional"
+                        data-price="10.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <!-- Fim Produto Item -->
+
+            <!-- Produto Item -->
+             <div class="flex gap-2">
+                <img 
+                src="./assets/ninho.png"
+                alt="CookieNinho"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                <div>
+                <p class="font-bold">Cookie de Ninho</p>
+                <p class="text-sm">Cookie macio com recheio cremoso de Ninho, trazendo um sabor suave, doce na medida e super aconchegante.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 15,00</p>
+                    <button
+                        class="bg-[#714520] px-5 rounded add-to-cart-btn"
+                        data-name="Cookie de Ninho"
+                        data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <!-- Fim Produto Item -->
+
+            <!-- Produto Item -->
+             <div class="flex gap-2">
+                <img 
+                src="./assets/nut.png"
+                alt="CookieNuttela"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                <div>
+                <p class="font-bold">Cookie de Nuttela</p>
+                <p class="text-sm">Massa de chocolate com recheio generoso de Nutella, cremoso e intenso, perfeito para quem ama chocolate.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 15,00</p>
+                    <button
+                        class="bg-[#714520] px-5 rounded add-to-cart-btn"
+                        data-name="Cookie de Nuttela"
+                        data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <!-- Fim Produto Item -->
+
+            <!-- Produto Item -->
+             <div class="flex gap-2">
+                <img 
+                src="./assets/kitkat.png"
+                alt="CookieKitKat"
+                class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300">
+                <div>
+                <p class="font-bold">Cookie de KitKat</p>
+                <p class="text-sm">Cookie recheado com pedaços de KitKat, unindo crocância e cremosidade em uma combinação cheia de chocolate.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 15,00</p>
+                    <button
+                        class="bg-[#714520] px-5 rounded add-to-cart-btn"
+                        data-name="Cookie de KitKat"
+                        data-price="15.00">
+                        <i class="fa fa-cart-plus text-lg text-white"></i>
+                    </button>
+                </div>
+            </div>
+            </div>
+            <!-- Fim Produto Item -->
+
+        </main>
+
+    </div>
+    <!-- Fim Menu -->
+
+    <!-- Modal Cart -->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-99 items-center justify-center hidden"
+    id="cart-modal">
+
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-150">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+
+            <div id="cart-items" class="flex flex-col justify-between mb-2"></div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold">Forma de pagamento</p>
+            <input type="text"
+            placeholder="Qual será a forma de pagamento?"
+            id="address"
+            class="w-full border-2 p-1 rounded my-1">
+
+            <p class="text-red-500 hidden" id="address-warn">Digite a forma de pagamento</p>
+
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Fim Modal Cart -->
+
+    <!-- Button Cart Footer -->
+     <footer class="w-full bg-[#20130a] py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button
+        class="flex items-center gap-2 text-white font-bold"
+        id="cart-btn">
+        (<span id="cart-count">0</span>)
+        Veja meu carrinho
+        <i class="fa fa-cart-plus text-lg text-white"></i>
+     </button>
+    </footer>
+    <!-- Fim Button Cart Footer -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
