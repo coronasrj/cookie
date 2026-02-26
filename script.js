@@ -145,17 +145,20 @@ checkoutBtn.addEventListener("click", function() {
         return;
     }
 
+    // const cartItems = cart.map((item) => {
+    //     return (
+    //         `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | `
+    //     )
+    // }).join("")
     const cartItems = cart.map((item) => {
-        return (
-            `${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} | `
-        )
-    }).join("")
+        return `${item.name}\nQuantidade: ${item.quantity}\nPreço: R$ ${item.price.toFixed(2)}\n`;
+    }).join("\n");
 
-    const message = encodeURIComponent(cartItems)
+    const message = encodeURIComponent(`${cartItems}\n\nForma de Pagamento: ${addressInput.value}\nTotal: ${cartTotal.textContent}`);
     const phone = "+5521975398758"
 
 
-    window.open(`https://wa.me/${phone}?text=${message} Forma de Pagamento: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 
     cart = [];
     updateCartModal();
